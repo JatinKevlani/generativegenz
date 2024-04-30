@@ -21,7 +21,7 @@
 }
 ::-webkit-scrollbar {
     width: 10px; 
-    height: 400px;
+    /* height: 400px; */
     transition: width 0.3s ease;
 }
 

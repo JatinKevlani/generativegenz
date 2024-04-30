@@ -10,7 +10,11 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 from twilio.rest import Client
 import pyshorteners
+from dotenv import dotenv_values
 
+env_vars = dotenv_values(".env")
+account_sid_env = env_vars.get("ACCOUNT_SID")
+auth_token_env = env_vars.get("AUTH_TOKEN")
 
 firebaseconfig={
      "apiKey": "AIzaSyCEqK-2vmtoAN3X_ppRzEdDwPpi1FC-MtU",
@@ -38,8 +42,10 @@ print(time1)
 
 @app.route("/api",methods=["POST","GET"])
 def api():
-    account_sid = 'ACf4d75a2dc02ed30b1772e79351a9af1b'
-    auth_token = 'f2b7c680d940eb45c5db569e0aad9577'
+    account_sid = account_sid_env
+    auth_token = auth_token_env
+    # account_sid='ACf4d75a2dc02ed30b1772e79351a9af1b'
+    # auth_token='f2b7c680d940eb45c5db569e0aad9577'
     client = Client(account_sid, auth_token)
 
     

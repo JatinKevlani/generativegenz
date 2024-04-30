@@ -3,5 +3,5 @@ flask-mail
 firebase_admin
 pyrebase
 pyshorteners
-twillio
+twilio
 fpdf

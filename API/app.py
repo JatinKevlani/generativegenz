@@ -44,8 +44,6 @@ print(time1)
 def api():
     account_sid = account_sid_env
     auth_token = auth_token_env
-    # account_sid='ACf4d75a2dc02ed30b1772e79351a9af1b'
-    # auth_token='f2b7c680d940eb45c5db569e0aad9577'
     client = Client(account_sid, auth_token)
 
     
